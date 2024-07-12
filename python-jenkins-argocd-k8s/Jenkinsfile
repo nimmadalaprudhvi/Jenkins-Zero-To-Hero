@@ -22,7 +22,7 @@ pipeline {
                 script{
                     sh '''
                     echo 'Build Docker Image'
-                    docker build -t prudhvi-pyt:${BUILD_NUMBER} .
+                    docker build -t prudhvi-python-project:${BUILD_NUMBER} .
                     '''
                 }
             }
