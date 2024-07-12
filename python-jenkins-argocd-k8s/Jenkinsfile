@@ -10,10 +10,8 @@ pipeline {
         
         stage('Checkout'){
            steps {
-                git credentialsId: 'github',  
-                url: 'https://github.com/nimmadalaprudhvi/Jenkins-Zero-To-Hero',
-                branch: 'main'  
-                                                                                                  
+               checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/nimmadalaprudhvi/Jenkins-Zero-To-Hero']])  
+                                                                                       
            }
         }
 
